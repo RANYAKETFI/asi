@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:asi/frontend/chose.dart';
+import 'package:asi/frontend/authenticate/chose.dart';
 import 'frontend/HomeScreen.dart';
 
 void main() {

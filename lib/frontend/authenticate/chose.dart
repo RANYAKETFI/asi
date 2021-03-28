@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:nice_button/nice_button.dart';
-import 'package:asi/frontend/HomeScreen.dart';
-import 'package:asi/frontend/Signin.dart';
+import 'package:asi/frontend//HomeScreen.dart';
+import 'package:asi/frontend/authenticate/Signin.dart';
 
 class Chose extends StatefulWidget {
   @override

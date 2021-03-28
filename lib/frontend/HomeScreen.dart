@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import 'chose.dart';
+import 'authenticate/chose.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
