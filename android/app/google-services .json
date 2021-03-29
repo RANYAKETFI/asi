@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "807287598754",
+    "project_id": "projet-asi-e00b8",
+    "storage_bucket": "projet-asi-e00b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807287598754:android:4d272d58f21b575bb8f1fb",
+        "android_client_info": {
+          "package_name": "com.example.asi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "807287598754-dbfnrsh129777fpor951jm6m2vbsicrr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnzbnODe0qEQvb14bBO0BEGdhd03rtNrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "807287598754-dbfnrsh129777fpor951jm6m2vbsicrr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
