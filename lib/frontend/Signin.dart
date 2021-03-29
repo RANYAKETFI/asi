@@ -1,4 +1,7 @@
+import 'package:asi/frontend/Admin.dart';
 import 'package:flutter/material.dart';
+
+import 'disponible.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -92,7 +95,7 @@ class _SignInScreenState extends State<SignInScreen> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                  MaterialPageRoute(builder: (context) => DispoScreen()),
                 );
               },
               color: Color(0xff427719),
