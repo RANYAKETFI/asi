@@ -1,4 +1,4 @@
-import 'package:flutter_app/models/the.dart';
+import 'package:asi/models/the.dart';
 import 'package:flutter/material.dart';
 
 class TheTile extends StatelessWidget {
