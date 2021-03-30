@@ -48,7 +48,7 @@ flutter:
   assets:
    - assets/images/fs.png
    - assets/images/top.png
-
+   - assets/images/profilepic.jpg
    - assets/images/logo.png
    - assets/images/logo_vert.png
   fonts:

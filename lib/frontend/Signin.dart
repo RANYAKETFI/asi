@@ -1,5 +1,11 @@
+
+import 'package:asi/frontend/Admin.dart';
+
 import 'package:asi/services/auth.dart';
+
 import 'package:flutter/material.dart';
+
+import 'disponible.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -122,7 +128,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     else{
                       Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SignInScreen()),
+                  MaterialPageRoute(builder: (context) => DispoScreen()),
                 );
                     }
                   }
