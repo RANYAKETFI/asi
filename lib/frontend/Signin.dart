@@ -1,14 +1,29 @@
+
 import 'package:asi/frontend/Admin.dart';
+
+import 'package:asi/services/auth.dart';
+
 import 'package:flutter/material.dart';
 
 import 'disponible.dart';
 
 class SignInScreen extends StatefulWidget {
+
+
   @override
   _SignInScreenState createState() => _SignInScreenState();
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  
+  final AuthService _auth = AuthService();
+  final _formKey = GlobalKey<FormState>();
+  String error = '';
+
+  // text field state
+  String email = '';
+  String password = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,8 +54,13 @@ class _SignInScreenState extends State<SignInScreen> {
             height: 25,
           ),
           Form(
+              key: _formKey,
               child: Column(children: <Widget>[
-            TextField(
+            TextFormField(
+              validator: (val) => val.isEmpty ? 'Enter an email' : null,
+                onChanged: (val) {
+                  setState(() => email = val);
+                },
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'BodoniMT',
@@ -62,8 +82,12 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
             ),
             SizedBox(height: 20),
-            TextField(
+            TextFormField(
               obscureText: true,
+                validator: (val) => val.length < 6 ? 'Enter a password 6+ chars long' : null,
+                onChanged: (val) {
+                  setState(() => password = val);
+                },
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'BodoniMT',
@@ -92,11 +116,22 @@ class _SignInScreenState extends State<SignInScreen> {
                   borderRadius: BorderRadius.circular(40.0),
                   side: BorderSide(color: Colors.white)),
               padding: EdgeInsets.all(10.0),
-              onPressed: () {
-                Navigator.push(
+              onPressed: () async {
+              
+                if(_formKey.currentState.validate()){
+                    dynamic result = await _auth.signInWithEmailAndPassword(email, password);
+                    if(result == null) {
+                      setState(() {
+                        error = 'Could not sign in with those credentials';
+                      });
+                    }
+                    else{
+                      Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => DispoScreen()),
                 );
+                    }
+                  }
               },
               color: Color(0xff427719),
               textColor: Colors.white,
@@ -108,6 +143,11 @@ class _SignInScreenState extends State<SignInScreen> {
                   fontFamily: 'BodoniMT',
                 ),
               )),
+               SizedBox(height: 12.0),
+              Text(
+                error,
+                style: TextStyle(color: Colors.red, fontSize: 14.0),
+              ),
         ],
       ),
       //color: Color(0xff02A89D),
