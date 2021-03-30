@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter_app/models/the.dart';
+import 'package:asi/models/the.dart';
 
 class DatabaseService {
   // collection reference
