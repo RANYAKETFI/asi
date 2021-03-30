@@ -1,5 +1,5 @@
-import 'package:flutter_app/models/the.dart';
-import 'package:flutter_app/screens/the_tile.dart';
+import 'package:asi/models/the.dart';
+import 'package:asi/screens/the_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +13,6 @@ class _TheListState extends State<TheList> {
   Widget build(BuildContext context) {
     final thes = Provider.of<List<The>>(context);
     thes.forEach((the) {
-      print("hello im here ");
       print(the.name);
       print(the.prix);
     });
